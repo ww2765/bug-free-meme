@@ -6,15 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Weihang Weihang</h1>
-<h2>Projects</h2>
-<ul>
-    <li> P1 <a href="./Project/P1 Small website"> Small Website</h1>
-</ul>
-</body>
-
-<br>
-<ul>
 .box {
     background: red;
     width: 300px;
@@ -23,6 +14,5 @@
 <div class="box">
     <p>ZTR</p>
 </div>
-</ul>
-
+</body>
 </html>
