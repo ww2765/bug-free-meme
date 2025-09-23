@@ -33,18 +33,8 @@ main {
   height: 60vh;
 }
 
-figure {
-  position: relative;
-  max-width: 100%;
-  margin: 20px 0;
-}
 
-figure img{
-  width: 10%;
-  height: 10%;
-  object-fit: cover;
-  display: block;
-}
+
 
 figcaption {
   position: absolute;
