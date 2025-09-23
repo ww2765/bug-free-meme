@@ -54,3 +54,8 @@ figcaption {
   padding: 5px 10px;
   font-size: 0.9em;
 }
+div{
+  width:700px;
+  border:3px #664a4a；
+  padding: 3px；
+}
