@@ -6,6 +6,16 @@
   height: 100%;
 }
 
+body {
+    background-color: rgb(104, 91, 70);
+}
+.contentwrapper {
+    padding-top: 330px;
+    padding-left: 160px;
+    padding-right: 20px;
+
+    color: blue;
+}
 main {
   min-height: 100vh;
   background-color: rgb(184, 123, 26);
