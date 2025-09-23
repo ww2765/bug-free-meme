@@ -88,3 +88,11 @@ h3{
 .box1 img {
   object-fit: cover;
 }
+
+.box2 img {
+  object-fit: contain;
+}
+
+.box3 img {
+  object-fit: fill;
+}
