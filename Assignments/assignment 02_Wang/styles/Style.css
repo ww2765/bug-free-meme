@@ -7,15 +7,11 @@
 }
 
 body {
-    background-color: rgb(104, 91, 70);
+    background-color: rgb(117, 76, 11);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.contentwrapper {
-    padding-top: 330px;
-    padding-left: 160px;
-    padding-right: 20px;
 
-    color: blue;
-}
+
 main {
   min-height: 100vh;
   background-color: rgb(184, 123, 26);
