@@ -63,5 +63,10 @@ figcaption {
 }
 
 h2{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: larger;
+  color: red;
+}
+h3{
   color: red;
 }
