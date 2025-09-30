@@ -79,7 +79,8 @@ footer {
      color: var(--color-text-light); 
      font-size: 0.9rem; }
 #Garden {
-    position: fixed;
+    display: flex;
+    justify-content: center;
     top: 0;
     left: 0;
     width: 250px;
@@ -89,7 +90,7 @@ footer {
     margin-top: 10px;
 
     box-sizing: border-box;
-    border-radius: 200px;
+    border-radius: 10px;
 
     z-index: 1;
 }
