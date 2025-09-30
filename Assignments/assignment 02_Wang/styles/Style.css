@@ -21,7 +21,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 300px;
+  height: 350px;
   background: rgb(184, 107, 7);
 }
 
@@ -29,7 +29,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 330px;
+    width: 300px;
     height: auto;
 
     margin-left: 150px;
