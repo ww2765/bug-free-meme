@@ -1,4 +1,4 @@
-:root { /* Color palette */ --color-bg: #fefcf9;
+:root { --color-bg: #fefcf9;
      --color-primary: #305f72; 
      --color-accent: #f2a541; 
      --color-text: #222; 
@@ -34,3 +34,15 @@ padding: 0;
   display: flex; 
   justify-content: center;
   gap: var(--space-m); }
+
+nav a { color: var(--color-primary);
+     text-decoration: none; 
+     font-weight: 600; 
+     padding: var(--space-xs) var(--space-s); 
+     border-radius: 4px; transition: background 0.3s, color 0.3s;
+     } 
+nav a:hover, nav a:focus 
+{ background: var(--color-accent); 
+    color: white; 
+    outline: 2px solid var(--color-primary); 
+}
