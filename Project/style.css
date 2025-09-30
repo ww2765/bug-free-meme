@@ -14,3 +14,15 @@
      padding: var(--space-l); 
      max-width: 70ch; 
      margin-inline: auto; }    
+h1 { font-size: var(--fs-h1); 
+    color: var(--color-primary); 
+    margin-bottom: var(--space-m); 
+    text-align: center; } 
+ h2 { font-size: var(--fs-h2); 
+        color: var(--color-primary); 
+        margin-top: var(--space-l); 
+        margin-bottom: var(--space-s);
+     } 
+p { margin-bottom: var(--space-m); 
+    color: var(--color-text-light); 
+    font-style: normal; }
