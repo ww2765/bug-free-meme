@@ -40,10 +40,7 @@ header {
 
     z-index: 1;
 }
-main {
-  min-height: 100vh;
-  background-color: rgb(184, 123, 26);
-}
+
 
 
 main, header, footer {
