@@ -59,32 +59,3 @@ header, footer {
     text-align: justify;
 }
 
-h2{
-  font-family: 'Courier New', Courier, monospace;
-  font-size: larger;
-  color: red;
-}
-h3{
-  color: red;
-}
-
-.box {
-  border: 5px solid black;
-}
-
-.box img {
-  width: 100%;
-  height: 100%;
-}
-
-.box1 img {
-  object-fit: cover;
-}
-
-.box2 img {
-  object-fit: contain;
-}
-
-.box3 img {
-  object-fit: fill;
-}
