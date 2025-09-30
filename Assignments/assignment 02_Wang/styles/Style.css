@@ -59,3 +59,11 @@ header, footer {
     text-align: justify;
 }
 
+.box.one {
+    grid-column: 2 / 3;
+    box-sizing: border-box;
+}
+
+.box.two {
+    grid-column: 3 / 4;
+}
