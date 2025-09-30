@@ -1,5 +1,6 @@
 :root { --color-bg: #fefcf9;
-     --color-primary: #305f72; 
+     --color-primary: #305f72;
+     --color-secondy:  #0c3342; 
      --color-accent: #f2a541; 
      --color-text: #222; 
      --color-text-light: #555;
@@ -35,7 +36,7 @@ padding: 0;
   justify-content: center;
   gap: var(--space-m); }
 
-nav a { color: var(--color-primary);
+nav a { color: var(--color-secondy);
      text-decoration: none; 
      font-weight: 600; 
      padding: var(--space-xs) var(--space-s); 
