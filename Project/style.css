@@ -26,3 +26,11 @@ h1 { font-size: var(--fs-h1);
 p { margin-bottom: var(--space-m); 
     color: var(--color-text-light); 
     font-style: normal; }
+
+nav ul 
+{ list-style: none;
+padding: 0;
+ margin: var(--space-m) 0;
+  display: flex; 
+  justify-content: center;
+  gap: var(--space-m); }
