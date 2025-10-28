@@ -1,0 +1,108 @@
+:root {
+  --bg-light: #f9f7f3;
+  --text-dark: #1e1e1e;
+  --accent: #b23a48;
+  --transition: 0.5s ease;
+}
+
+body {
+  font-family: "Noto Serif SC", serif;
+  margin: 0;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  border: none;
+  background-color: var(--accent);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover { background-color: #922b21; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.card {
+  text-decoration: none;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.card:hover { transform: scale(1.05); opacity: 0.9; }
+
+.spring { background: #a7d7a9; }
+.summer { background: #f4c542; color: #222; }
+.autumn { background: #e67e22; }
+.winter { background: #34495e; }
+.rain { background: #5dade2; }
+.snow { background: #95a5a6; }
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #888;
+}
+
+/* Entry pages */
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  animation: fadeIn 1s ease-in;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+nav a {
+  color: var(--accent);
+  margin: 1rem;
+  display: inline-block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Color themes for each page */
+.spring-page { background: #f0f8f3; }
+.summer-page { background: #fff7e6; }
+.autumn-page { background: #fff1e0; }
+.winter-page { background: #1c1c1c; color: #f5f5f5; }
+.rain-page { background: #e6f2fa; }
+.snow-page { background: #f8f8f8; }
+
+/* Dark mode */
+body.dark {
+  background-color: #121212;
+  color: #e6e6e6;
+}
