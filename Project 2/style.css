@@ -1,108 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap');
+
 :root {
-  --bg-light: #f9f7f3;
-  --text-dark: #1e1e1e;
-  --accent: #b23a48;
-  --transition: 0.5s ease;
+  --bg-light: #f9f8f5;
+  --bg-dark: #151515;
+  --text-dark: #1a1a1a;
+  --text-light: #f5f5f5;
+  --accent: #b83a2f;
+  --shadow: rgba(0, 0, 0, 0.15);
+  --transition: 0.4s ease;
 }
 
+/* -------------------------------------
+   BASE STYLES
+-------------------------------------- */
 body {
-  font-family: "Noto Serif SC", serif;
-  margin: 0;
-  background: var(--bg-light);
+  font-family: "Cormorant Garamond", "Noto Serif SC", serif;
+  background-color: var(--bg-light);
   color: var(--text-dark);
+  margin: 0;
   transition: background-color var(--transition), color var(--transition);
 }
 
 header {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
+  animation: fadeIn 1s ease-in;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
-  font-size: 1rem;
-  color: #777;
+  font-size: 1.1rem;
+  color: #666;
+  font-style: italic;
   margin-bottom: 1rem;
 }
 
 button {
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1.2rem;
   border: none;
   background-color: var(--accent);
-  color: white;
+  color: var(--text-light);
+  font-family: "Cormorant Garamond";
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
-button:hover { background-color: #922b21; }
+button:hover {
+  background-color: #922b21;
+}
 
+/* -------------------------------------
+   FULLSCREEN GRID ON INDEX PAGE
+-------------------------------------- */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  padding: 2rem;
+  grid-auto-rows: 200px;
+  gap: 0.5rem;
+  width: 100%;
+  height: calc(100vh - 180px);
+  padding: 0.5rem;
+  box-sizing: border-box;
 }
 
 .card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
   text-decoration: none;
-  padding: 2rem;
-  text-align: center;
-  border-radius: 12px;
   color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   font-weight: 600;
-  transition: transform 0.4s, opacity 0.4s;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  box-shadow: 0 4px 8px var(--shadow);
 }
 
-.card:hover { transform: scale(1.05); opacity: 0.9; }
-
-.spring { background: #a7d7a9; }
-.summer { background: #f4c542; color: #222; }
-.autumn { background: #e67e22; }
-.winter { background: #34495e; }
-.rain { background: #5dade2; }
-.snow { background: #95a5a6; }
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  color: #888;
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 70%);
+  transition: opacity 0.3s ease;
 }
 
-/* Entry pages */
+.card span {
+  position: relative;
+  z-index: 2;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  filter: brightness(1.15);
+}
+
+.card:hover span {
+  opacity: 1;
+}
+
+/* -------------------------------------
+   GRID TILE IMAGES — THEMES OF BEIJING
+-------------------------------------- */
+.hutong {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/8a/Beijing_hutong_alley.jpg');
+}
+.temple {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/55/Lama_Temple_Beijing.jpg');
+}
+.market {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/66/Beijing_morning_market.jpg');
+}
+.roof {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/77/Beijing_siheyuan_roof.jpg');
+}
+.lanterns {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1d/Red_lanterns_Beijing.jpg');
+}
+.modern {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/33/Beijing_CBD_skyline.jpg');
+}
+.bicycle {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/44/Beijing_bicycles_street.jpg');
+}
+.food {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/86/Beijing_street_food.jpg');
+}
+.night {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9c/Beijing_night_lights.jpg');
+}
+
+/* -------------------------------------
+   ENTRY PAGE LAYOUT
+-------------------------------------- */
 main {
-  max-width: 700px;
+  max-width: 800px;
   margin: 2rem auto;
-  padding: 1rem;
-  animation: fadeIn 1s ease-in;
+  padding: 1rem 2rem;
+  animation: fadeIn 1s ease;
 }
 
-img {
+main img {
   width: 100%;
   border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow);
   margin: 1rem 0;
+}
+
+main p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+  text-align: justify;
 }
 
 nav a {
   color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
   margin: 1rem;
-  display: inline-block;
 }
 
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------------------
+   FOOTER
+-------------------------------------- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* -------------------------------------
+   ANIMATIONS
+-------------------------------------- */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Color themes for each page */
-.spring-page { background: #f0f8f3; }
-.summer-page { background: #fff7e6; }
-.autumn-page { background: #fff1e0; }
-.winter-page { background: #1c1c1c; color: #f5f5f5; }
-.rain-page { background: #e6f2fa; }
-.snow-page { background: #f8f8f8; }
-
-/* Dark mode */
+/* -------------------------------------
+   DARK MODE
+-------------------------------------- */
 body.dark {
-  background-color: #121212;
-  color: #e6e6e6;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+body.dark .card::after {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 70%);
+}
+
+body.dark footer {
+  color: #bbb;
 }
