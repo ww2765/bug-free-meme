@@ -11,9 +11,7 @@
   --transition: 0.4s ease;
 }
 
-/* -------------------------------------
-   BASE STYLES
--------------------------------------- */
+
 body {
   font-family: "Cormorant Garamond", "Noto Serif SC", serif;
   background-color: var(--bg-light);
@@ -56,23 +54,20 @@ button:hover {
   background-color: #922b21;
 }
 
-/* -------------------------------------
-   FULLSCREEN GRID ON INDEX PAGE
--------------------------------------- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-auto-rows: 200px;
-  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.6rem;
   width: 100%;
-  height: calc(100vh - 180px);
-  padding: 0.5rem;
+  height: calc(100vh - 200px);
+  padding: 0.6rem;
   box-sizing: border-box;
 }
 
 .card {
   position: relative;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   background-size: cover;
   background-position: center;
@@ -98,7 +93,7 @@ button:hover {
   position: relative;
   z-index: 2;
   padding: 0.5rem 1rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   opacity: 0;
   transition: opacity 0.4s ease;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
@@ -113,9 +108,21 @@ button:hover {
   opacity: 1;
 }
 
-/* -------------------------------------
-   GRID TILE IMAGES — THEMES OF BEIJING
--------------------------------------- */
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .hutong {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/8a/Beijing_hutong_alley.jpg');
 }
@@ -143,10 +150,6 @@ button:hover {
 .night {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9c/Beijing_night_lights.jpg');
 }
-
-/* -------------------------------------
-   ENTRY PAGE LAYOUT
--------------------------------------- */
 main {
   max-width: 800px;
   margin: 2rem auto;
@@ -178,9 +181,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* -------------------------------------
-   FOOTER
--------------------------------------- */
 footer {
   text-align: center;
   padding: 1rem;
@@ -188,17 +188,12 @@ footer {
   color: #777;
 }
 
-/* -------------------------------------
-   ANIMATIONS
--------------------------------------- */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* -------------------------------------
-   DARK MODE
--------------------------------------- */
+
 body.dark {
   background-color: var(--bg-dark);
   color: var(--text-light);
