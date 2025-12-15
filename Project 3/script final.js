@@ -13,7 +13,7 @@ const data = {
     { title: "Temple Visit", image: "Temple-of-Heaven-gate.jpg", id: "temple" },
     { title: "School Pickup", image: "services-bus.jpg", id: "school" },
     { title: "Public Square Dancing (Practice)", image: "Public Square Dancing.jpg", id: "dancing" },
-    { title: "Teahouse Rest", image: "images/day/teahouse.jpg", id: "teahouse" }
+    { title: "Teahouse Rest", image: "tea ceremony.jpg", id: "teahouse" }
   ],
 
   night: [
