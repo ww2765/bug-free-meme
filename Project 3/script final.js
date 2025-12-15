@@ -23,8 +23,8 @@ const data = {
     { title: "Street Food Vendors", image: "street food.jpg", id: "vendors" },
     { title: "Neon Hutongs", image: "hutong.jpg", id: "hutong" },
     { title: "Evening Stroll", image: "stroll.jpg", id: "stroll" },
-    { title: "Night Cycling", image: "images/night/night-bike.jpg", id: "night-bike" },
-    { title: "Convenience Store Break", image: "images/night/store.jpg", id: "store" },
+    { title: "Night Cycling", image: "cycling.jpeg", id: "night-bike" },
+    { title: "Convenience Store Break", image: "convine.png", id: "store" },
     { title: "Bridge Views", image: "images/night/bridge.jpg", id: "bridge" }
   ]
 };
