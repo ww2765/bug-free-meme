@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Activity Detail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <main style="max-width: 700px; margin: auto;">
+    <a href="index.html">← Back to Catalog</a>
+    <h1 id="title"></h1>
+    <img id="image" />
+    <p id="description"></p>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    const content = {
+      taichi: {
+        title: "Morning Tai Chi",
+        image: "images/day/taichi.jpg",
+        text: "Elderly residents gather at dawn in public parks to practice Tai Chi, blending health, ritual, and social life."
+      },
+      mahjong: {
+        title: "Late Mahjong",
+        image: "images/night/mahjong.jpg",
+        text: "Friends and neighbors play Mahjong late into the night, turning domestic spaces into social infrastructures."
+      }
+    };
+
+    const item = content[id];
+    if (item) {
+      document.getElementById("title").textContent = item.title;
+      document.getElementById("image").src = item.image;
+      document.getElementById("description").textContent = item.text;
+    }
+  </script>
+</body>
+</html>
