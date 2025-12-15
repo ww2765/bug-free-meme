@@ -1,53 +1,57 @@
-const dayActivities = [
-{ title: "Morning Taijiquan", img: "https://source.unsplash.com/600x400/?beijing,park", desc: "Retirees practicing Taijiquan in neighborhood parks, synchronizing breath, movement, and time." },
-{ title: "Wet Market Shopping", img: "https://source.unsplash.com/600x400/?china,market", desc: "Daily grocery shopping at wet markets, where bargaining and freshness define value." },
-{ title: "Hutong Cycling", img: "https://source.unsplash.com/600x400/?hutong,bicycle", desc: "Cycling through narrow hutongs as a primary way of navigating the city." },
-{ title: "Street Breakfast", img: "https://source.unsplash.com/600x400/?chinese,breakfast", desc: "Buying jianbing or soy milk from street vendors during the morning rush." },
-{ title: "Public Square Dancing", img: "https://source.unsplash.com/600x400/?china,dancing", desc: "Group dancing in public plazas, transforming leftover urban space into social stages." },
-{ title: "Calligraphy Practice", img: "https://source.unsplash.com/600x400/?chinese,calligraphy", desc: "Water calligraphy written on pavement, disappearing as it dries." },
-{ title: "Mahjong Gathering", img: "https://source.unsplash.com/600x400/?mahjong", desc: "Friends and neighbors playing mahjong as a daily ritual of strategy and sociality." },
-{ title: "Food Delivery Pickups", img: "https://source.unsplash.com/600x400/?china,delivery", desc: "Delivery riders waiting outside restaurants, connecting kitchens to apartments." },
-{ title: "Afternoon Tea Shops", img: "https://source.unsplash.com/600x400/?beijing,cafe", desc: "Milk tea and cafés as informal study and rest spaces throughout the city." }
-];
+const catalog = document.getElementById("catalog");
+const toggleBtn = document.getElementById("modeToggle");
 
+let mode = "day";
 
-const nightActivities = [
-{ title: "Night Market Eating", img: "https://source.unsplash.com/600x400/?beijing,night,market", desc: "Street food stalls lighting up neighborhoods with smoke, sound, and smell." },
-{ title: "Late-Night Skewers", img: "https://source.unsplash.com/600x400/?chinese,bbq", desc: "Friends gathering over chuanr skewers after work." },
-{ title: "Evening Walks", img: "https://source.unsplash.com/600x400/?beijing,night,street", desc: "Slow walks through residential compounds as the city cools." },
-{ title: "Subway Commute", img: "https://source.unsplash.com/600x400/?beijing,subway", desc: "Dense subway rides marking the transition from work to rest." },
-{ title: "Mobile Phone Scrolling", img: "https://source.unsplash.com/600x400/?smartphone,night", desc: "Quiet phone use in beds, buses, and bedrooms before sleep." },
-{ title: "24-Hour Convenience Stores", img: "https://source.unsplash.com/600x400/?convenience,store,china", desc: "Bright interiors punctuating dark streets." },
-{ title: "Night Fishing", img: "https://source.unsplash.com/600x400/?night,fishing", desc: "Solitary fishing along rivers and lakes under streetlights." },
-{ title: "Late Study Sessions", img: "https://source.unsplash.com/600x400/?study,night", desc: "Students studying late in dorms and libraries." },
-{ title: "Cleaning the City", img: "https://source.unsplash.com/600x400/?street,cleaning,night", desc: "Sanitation workers maintaining the city while most people sleep." }
-];
+const data = {
+  day: [
+    { title: "Morning Tai Chi", image: "taichi.jpg", id: "taichi" },
+    { title: "Wet Market Shopping", image: "images/day/market.jpg", id: "market" },
+    { title: "Street Breakfast", image: "images/day/breakfast.jpg", id: "breakfast" },
+    { title: "Park Calligraphy", image: "images/day/calligraphy.jpg", id: "calligraphy" },
+    { title: "Cycling Commute", image: "images/day/cycling.jpg", id: "cycling" },
+    { title: "Temple Visit", image: "images/day/temple.jpg", id: "temple" },
+    { title: "School Pickup", image: "images/day/school.jpg", id: "school" },
+    { title: "Public Square Dancing (Practice)", image: "images/day/dancing.jpg", id: "dancing" },
+    { title: "Teahouse Rest", image: "images/day/teahouse.jpg", id: "teahouse" }
+  ],
 
+  night: [
+    { title: "Night Market Skewers", image: "images/night/skewers.jpg", id: "skewers" },
+    { title: "Square Dancing", image: "images/night/square-dance.jpg", id: "square-dance" },
+    { title: "Late Mahjong", image: "images/night/mahjong.jpg", id: "mahjong" },
+    { title: "Street Food Vendors", image: "images/night/vendors.jpg", id: "vendors" },
+    { title: "Neon Hutongs", image: "images/night/hutong.jpg", id: "hutong" },
+    { title: "Evening Stroll", image: "images/night/stroll.jpg", id: "stroll" },
+    { title: "Night Cycling", image: "images/night/night-bike.jpg", id: "night-bike" },
+    { title: "Convenience Store Break", image: "images/night/store.jpg", id: "store" },
+    { title: "Bridge Views", image: "images/night/bridge.jpg", id: "bridge" }
+  ]
+};
 
-const catalog = document.getElementById('catalog');
-const toggle = document.getElementById('modeToggle');
-let isDay = true;
+function render() {
+  catalog.innerHTML = "";
 
+  data[mode].forEach(item => {
+    const figure = document.createElement("figure");
 
-function render(items) {
-catalog.innerHTML = '';
-items.forEach(item => {
-const card = document.createElement('article');
-card.className = 'card';
+    figure.innerHTML = `
+      <a href="activity.html?id=${item.id}">
+        <img src="${item.image}" alt="${item.title}">
+        <figcaption>${item.title}</figcaption>
+      </a>
+    `;
 
-
-card.innerHTML = `
-<img src="${item.img}" alt="${item.title}">
-<h2>${item.title}</h2>
-<div class="description">${item.desc}</div>
-`;
-
-
-card.addEventListener('click', () => {
-card.classList.toggle('active');
-});
-
-
-catalog.appendChild(card);
-});
+    catalog.appendChild(figure);
+  });
 }
+
+toggleBtn.addEventListener("click", () => {
+  mode = mode === "day" ? "night" : "day";
+  document.body.classList.toggle("night");
+  toggleBtn.textContent =
+    mode === "day" ? "Switch to Night Mode" : "Switch to Day Mode";
+  render();
+});
+
+render();
