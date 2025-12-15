@@ -9,7 +9,7 @@ const data = {
     { title: "Wet Market Shopping", image: "wet market.jpg", id: "market" },
     { title: "Street Breakfast", image: "breakfast beijing.jpg", id: "breakfast" },
     { title: "Park Calligraphy", image: "Park Calligraphy.jpg", id: "calligraphy" },
-    { title: "Cycling Commute", image: "Cycling Commute.jpeg", id: "cycling" },
+    { title: "Cycling Commute", image: "Cycling Commute.jpg", id: "cycling" },
     { title: "Temple Visit", image: "Temple-of-Heaven-gate.jpg", id: "temple" },
     { title: "School Pickup", image: "services-bus.jpg", id: "school" },
     { title: "Public Square Dancing (Practice)", image: "Public Square Dancing.jpg", id: "dancing" },
