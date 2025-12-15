@@ -71,12 +71,5 @@ body.night figure {
     grid-template-columns: repeat(2, 1fr);
   }
 
-a,
-a:link,
-a:visited,
-a:hover,
-a:active {
-  color: inherit !important;
-  text-decoration: none !important;
-}
+
 }

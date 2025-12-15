@@ -17,8 +17,8 @@ const data = {
   ],
 
   night: [
-    { title: "Night Market Skewers", image: "images/night/skewers.jpg", id: "skewers" },
-    { title: "Square Dancing", image: "images/night/square-dance.jpg", id: "square-dance" },
+    { title: "Night Market Skewers", image: "skewers.jpeg", id: "skewers" },
+    { title: "Square Dancing", image: "square dance.jpg", id: "square-dance" },
     { title: "Late Mahjong", image: "images/night/mahjong.jpg", id: "mahjong" },
     { title: "Street Food Vendors", image: "images/night/vendors.jpg", id: "vendors" },
     { title: "Neon Hutongs", image: "images/night/hutong.jpg", id: "hutong" },
