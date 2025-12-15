@@ -9,7 +9,7 @@
 
 <body>
   <main style="max-width: 700px; margin: auto;">
-    <a href="Project 3.html">← Back to Catalog</a>
+    <a href="index.html">← Back to Catalog</a>
     <h1 id="title"></h1>
     <img id="image" />
     <p id="description"></p>
@@ -33,10 +33,16 @@
       market: {
         title: "Wet Market Shopping",
         image: "wet market.jpg",
-        text: ""
+        text: "Friends and neighbors play Mahjong late into the night, turning domestic spaces into social infrastructures."
+      }
+    };
+
+    const item = content[id];
+    if (item) {
+      document.getElementById("title").textContent = item.title;
+      document.getElementById("image").src = item.image;
+      document.getElementById("description").textContent = item.text;
     }
-    }
-    
   </script>
 </body>
 </html>
