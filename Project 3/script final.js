@@ -25,7 +25,7 @@ const data = {
     { title: "Evening Stroll", image: "stroll.jpg", id: "stroll" },
     { title: "Night Cycling", image: "cycling.jpeg", id: "night-bike" },
     { title: "Convenience Store Break", image: "convine.png", id: "store" },
-    { title: "Bridge Views", image: "images/night/bridge.jpg", id: "bridge" }
+    { title: "Bridge Views", image: "caption.jpg", id: "bridge" }
   ]
 };
 
