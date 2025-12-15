@@ -6,8 +6,8 @@ let mode = "day";
 const data = {
   day: [
     { title: "Morning Tai Chi", image: "taichi.jpg", id: "taichi" },
-    { title: "Wet Market Shopping", image: "images/day/market.jpg", id: "market" },
-    { title: "Street Breakfast", image: "images/day/breakfast.jpg", id: "breakfast" },
+    { title: "Wet Market Shopping", image: "wet market.jpg", id: "market" },
+    { title: "Street Breakfast", image: "breakfast beijing.jpg", id: "breakfast" },
     { title: "Park Calligraphy", image: "images/day/calligraphy.jpg", id: "calligraphy" },
     { title: "Cycling Commute", image: "images/day/cycling.jpg", id: "cycling" },
     { title: "Temple Visit", image: "images/day/temple.jpg", id: "temple" },
