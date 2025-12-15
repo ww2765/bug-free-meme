@@ -51,8 +51,3 @@ card.classList.toggle('active');
 catalog.appendChild(card);
 });
 }
-
-
-toggle.addEventListener('click', () => {
-isDay = !isDay;
-document.body.classList.toggle('night');
